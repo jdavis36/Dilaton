@@ -1,0 +1,29 @@
+\documentclass[twocolumn]{article}
+\usepackage{graphicx}
+\author{Jeffery Davis \and Jacob Siegel}
+\date{\today}
+\title{Search for the Low Mass Dilaton}
+\begin{document}
+\maketitle
+\section{Abstract}
+It is possible that electroweak symmetry breaking is due to strongly coupled conforal dynamics. A result of this scale symmetry breaking might be a Nambu-Goldstone boson, the dilaton, which couppled to Standard Model (SM) particles similarly to the SM Higgs. Current dilaton searches use higgs searches, and as such neglect the low mass dilaton (\begin{math}M_{\chi} \textless \frac{100 GeV}{c^{2}}\end{math}). We use the narrow width approximation to relate the higgs and dilaton cross sections for the gamma gamma decay channel. We model the higgs phenomonology, and use current data and a Monte-Carlo analysis to estimate hot spots for a low mass dilaton search. 
+\section{Motivation}
+Current dilaton searches have consisted of modified higgs searches. These searches look for a higgs and if a higgs like particle is found attempt to distinguish it from a dilaton. Pre LHC searches had excluded a low mass (\begin{math}M_{\chi} \textless \frac{100 GeV}{c^{2}}\end{math}) higgs and as such low mass dilaton searches were never performed. Dilatons are characterized by their mass and by the scale of conformal symmetry breaking \begin{math} f \end{math}. Within the range of our low mass search \begin{math} f \end{math} could be as low as 400 GeV. At these low masses we assume the dilaton, \begin{math} \chi \end{math}, is produced only via gluon gluon fusion. For the low masses we are interested in the \begin{math} \chi \rightarrow \gamma \gamma \end{math} decay channel, becauce the dilaton branching ratios are highest in this decay channel, and cutting and data analysis are simpler. For \begin{math} \chi \rightarrow \gamma \gamma \end{math} our background is \begin{math} q q \rightarrow \gamma \gamma \end{math} and \begin{math} p p  \rightarrow \gamma \gamma j j \end{math}. Most of the jet background can be cut out by requiring a minimum distance between the gamma's and the jets, but it is impossible to cut out the quark fusion background. This background increases with a lower invarient mass, but so does the dilaton production cross section.  
+\section{Simulations}
+\subsection{The heft Model}
+We use Madgraph 5, a FORTRAN90 based Monte-Carlo generator, which runs at NLO. Madgraph estimates a total cross section for whatever process you simulate, and can plot many graphs, such as transverse monentum or invarient mass. Madgraphs estimate of production cross section is inaccurate, so it can not be used for analysis but the Monte-Carlo is extremly useful for cutting. For the \begin{math} \gamma \gamma \end{math} decay channel we have as background \begin{math} q q \rightarrow \gamma \gamma \end{math} and  \begin{math} p p  \rightarrow \gamma \gamma j j \end{math}. We are interested in what fraction of our signal, \begin{math} \sigma (p p \rightarrow \chi \rightarrow \gamma \gamma ) \end{math} passes our cuts. We do not need an accuate estimate of the cross section for this, only a ratio between pre and post-cut cross sections. We use the higgs as our dilaton analog because they behave the same except for the strength of their couplings, so we can use the default heft model to get an accurate pre/post-cut cross section ratio. Madgraph default can not simulate \begin{math} \sigma (p p \rightarrow H \rightarrow \gamma \gamma ) \end{math} because it can not process the top quark loops. The heft model solves this by assuming the mass of the top quark is infinity, thereby reducing the top loop to a point, which can be approximated by a Lagrangian. This approximation holds from a higgs mass is \begin{math} \textless \end{math} 2 top masses. Since we are looking in a low mass range this approximation holds.
+\subsection{Background} 
+The background can be split into two catagories, the background that can be reduced by cuts, \begin{math} p p  \rightarrow \gamma \gamma j j \end{math}, and that which can not:  \begin{math} q q \rightarrow \gamma \gamma \end{math}. For  \begin{math} qq \rightarrow \gamma \gamma \end{math} we have a background which falls with increasing invarient mass. \begin{figure}[h]\includegraphics[width=0.5\textwidth]{qqaa} \caption{We impose the default Madgraph generator level cuts, most importantly the minimum photon transverse momentun is 10 GeV.} \end{figure} \\
+ Our \begin{math} p p  \rightarrow \gamma \gamma j j \end{math} background follows the shape:  \includegraphics[width=0.5\textwidth]{ppaajj}
+\\
+\\
+\\
+A tpyical Fyenman diagram for this background is: \includegraphics[width=0.5\textwidth]{Diagram1}
+\\
+The photons from this background will tend to be closer to the jets
+\subsection{Signal}
+Our main signal is \begin{math} p p \rightarrow \chi \rightarrow \gamma \gamma \end{math} however even in the idealzized no detector simulations we actually have  \begin{math} p p \rightarrow \chi \rightarrow \gamma \gamma j j \end{math}. A typical cross section for this process looks like :
+\includegraphics[width=0.5\textwidth]{Diagram2} 
+\\
+
+\end{document}
